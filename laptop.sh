@@ -39,11 +39,6 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 25
 # Use dark style for menu bar and Dock
 defaults write NSGlobalDomain AppleInterfaceStyle -string Dark
 
-# Remove Time Machine from menu bar
-old_menu_extras=$(defaults read com.apple.systemuiserver menuExtras)
-new_menu_extras=$(fgrep -v TimeMachine <<<$old_menu_extras)
-defaults write com.apple.systemuiserver menuExtras $new_menu_extras
-
 # Enable tap to click
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
