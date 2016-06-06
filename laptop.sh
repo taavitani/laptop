@@ -75,4 +75,5 @@ brew "zsh"
 _EOT
 
 ZSH_PATH=$(brew --prefix)/bin/zsh
+echo $ZSH_PATH | sudo tee -a /etc/shells
 chsh -s $ZSH_PATH
