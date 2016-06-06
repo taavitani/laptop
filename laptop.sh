@@ -68,3 +68,10 @@ sudo scutil --set HostName pondermatic
 
 # Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+brew update
+brew bundle --file=- <<_EOT
+brew "zsh"
+_EOT
+
+chsh -s $(which zsh)
