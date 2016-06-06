@@ -65,3 +65,6 @@ sudo systemsetup -setremotelogin on
 # Hostname
 sudo networksetup -setcomputername Pondermatic
 sudo scutil --set HostName pondermatic
+
+# Homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
