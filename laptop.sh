@@ -9,6 +9,9 @@ defaults write com.apple.dock autohide -bool true
 # Show only running apps in the Dock
 defaults write com.apple.dock static-only -bool true
 
+# Indicators useless if only showin running apps
+defaults write com.apple.dock show-process-indicators -bool false
+
 # Tab moves focus between all window/dialog elements
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
