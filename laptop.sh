@@ -74,4 +74,5 @@ brew bundle --file=- <<_EOT
 brew "zsh"
 _EOT
 
-chsh -s $(which zsh)
+ZSH_PATH=$(brew --prefix)/bin/zsh
+chsh -s $ZSH_PATH
