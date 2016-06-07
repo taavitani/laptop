@@ -27,6 +27,9 @@ defaults write com.apple.finder QuitMenuItem -bool true
 # Starting a search in Finder defaults to the current directory
 defaults write com.apple.finder FXDefaultSearchScope -string SCcf
 
+# Disable file extension change warning dialog.
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
 # Vanilla function keys
 defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true
 
