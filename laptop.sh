@@ -75,8 +75,14 @@ sudo scutil --set HostName pondermatic
 brew update
 brew bundle --file=- <<_EOT
 brew "zsh"
+brew "git"
 _EOT
 
 ZSH_PATH=$(brew --prefix)/bin/zsh
 echo $ZSH_PATH | sudo tee -a /etc/shells
 chsh -s $ZSH_PATH
+
+DOTFILES_REPO=https://github.com/taavitani/dotfiles
+DOTFILES_PATH=~/src/${DOTFILES_REPO##https://}
+
+git clone $DOTFILES_REPO $DOTFILES_PATH
