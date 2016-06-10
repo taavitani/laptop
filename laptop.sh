@@ -74,8 +74,11 @@ sudo scutil --set HostName pondermatic
 
 brew update
 brew bundle --file=- <<_EOT
+tap "thoughtbot/formulae"
+
 brew "zsh"
 brew "git"
+brew "rcm"
 _EOT
 
 ZSH_PATH=$(brew --prefix)/bin/zsh
@@ -86,3 +89,5 @@ DOTFILES_REPO=https://github.com/taavitani/dotfiles
 DOTFILES_PATH=~/src/${DOTFILES_REPO##https://}
 
 git clone $DOTFILES_REPO $DOTFILES_PATH
+
+env RCRC=$DOTFILES_PATH/rcrc rcup -f -v
