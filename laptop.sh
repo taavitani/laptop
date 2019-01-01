@@ -55,9 +55,8 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # Unhide library
 chflags nohidden ~/Library
 
-# Create some standard folders. And hide those in Finder
+# Create some standard folders
 mkdir -p ~/bin ~/src
-chflags hidden ~/bin ~/src
 
 # Get our sudo ticket ready
 sudo -v -p "Password for sudo: "
