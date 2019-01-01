@@ -33,14 +33,12 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 # Vanilla function keys
 defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true
 
-# Disable character viewer so holding down a key simply repeats
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+# Enable press and hold key repeat
+defaults delete -g ApplePressAndHoldEnabled
 
-# Set key repeat to a pretty fast rate
-defaults write NSGlobalDomain KeyRepeat -int 6
-
-# Reduce the delay before a held key starts to repeat
-defaults write NSGlobalDomain InitialKeyRepeat -int 25
+# Make key repeat way fast
+defaults write -g InitialKeyRepeat -int 20
+defaults write -g InitialKeyRepeat -int 4
 
 # Use dark style for menu bar and Dock
 defaults write NSGlobalDomain AppleInterfaceStyle -string Dark
