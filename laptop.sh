@@ -76,7 +76,6 @@ tap "thoughtbot/formulae"
 brew "zsh"
 brew "git"
 brew "rcm"
-cask "alacritty"
 _EOT
 
 ZSH_PATH=$(brew --prefix)/bin/zsh
