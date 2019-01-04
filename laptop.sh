@@ -76,6 +76,7 @@ tap "thoughtbot/formulae"
 brew "zsh"
 brew "git"
 brew "rcm"
+cask "alacritty"
 _EOT
 
 ZSH_PATH=$(brew --prefix)/bin/zsh
@@ -88,3 +89,6 @@ DOTFILES_PATH=~/src/${DOTFILES_REPO##https://}
 git clone $DOTFILES_REPO $DOTFILES_PATH
 
 env RCRC=$DOTFILES_PATH/rcrc rcup -f -v
+
+# Make SF Mono available for Alacritty
+cp /Applications/Utilities/Terminal.app/Contents/Resources/Fonts/*.otf ~/Library/Fonts/
