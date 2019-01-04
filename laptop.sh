@@ -92,3 +92,6 @@ env RCRC=$DOTFILES_PATH/rcrc rcup -f -v
 
 # Make SF Mono available for Alacritty
 cp /Applications/Utilities/Terminal.app/Contents/Resources/Fonts/*.otf ~/Library/Fonts/
+
+# Brewfile was updated from dotfiles
+brew bundle
