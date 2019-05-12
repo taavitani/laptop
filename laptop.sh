@@ -34,7 +34,7 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true
 
 # Enable press and hold key repeat
-defaults delete -g ApplePressAndHoldEnabled
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -boot false
 
 # Make key repeat way fast
 defaults write -g InitialKeyRepeat -int 20
