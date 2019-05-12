@@ -38,7 +38,7 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -boot false
 
 # Make key repeat way fast
 defaults write -g InitialKeyRepeat -int 20
-defaults write -g InitialKeyRepeat -int 4
+defaults write -g KeyRepeat -int 4
 
 # Use dark style for menu bar and Dock
 defaults write NSGlobalDomain AppleInterfaceStyle -string Dark
