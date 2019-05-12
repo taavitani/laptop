@@ -97,3 +97,9 @@ brew bundle
 
 # SSH remote URL
 git -C $DOTFILES_PATH remote set-url origin git@github.com:taavitani/dotfiles.git
+
+# Clone laptop repo
+LAPTOP_REPO=https://github.com/taavitani/laptop
+LAPTOP_PATH=~/src/${LAPTOP_REPO##https://}
+
+git clone $LAPTOP_REPO $LAPTOP_PATH
