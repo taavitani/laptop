@@ -94,3 +94,6 @@ cp /Applications/Utilities/Terminal.app/Contents/Resources/Fonts/*.otf ~/Library
 
 # Brewfile was updated from dotfiles
 brew bundle
+
+# SSH remote URL
+git -C $DOTFILES_PATH remote set-url origin git@github.com:taavitani/dotfiles.git
