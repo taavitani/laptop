@@ -61,7 +61,7 @@ sudo networksetup -setcomputername Pondermatic
 sudo scutil --set HostName pondermatic
 
 # Homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 brew update
 brew bundle --file=- <<_EOT
