@@ -33,9 +33,6 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 # Vanilla function keys
 defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true
 
-# Enable press and hold key repeat
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -boot false
-
 # Make key repeat way fast
 defaults write -g InitialKeyRepeat -int 20
 defaults write -g KeyRepeat -int 4
@@ -58,9 +55,6 @@ mkdir -p ~/bin ~/src
 
 # Get our sudo ticket ready
 sudo -v -p "Password for sudo: "
-
-# Turn on SSH
-sudo systemsetup -setremotelogin on
 
 # Hostname
 sudo networksetup -setcomputername Pondermatic
@@ -90,7 +84,7 @@ git clone $DOTFILES_REPO $DOTFILES_PATH
 env RCRC=$DOTFILES_PATH/rcrc rcup -f -v
 
 # Make SF Mono available for Alacritty
-cp /Applications/Utilities/Terminal.app/Contents/Resources/Fonts/*.otf ~/Library/Fonts/
+cp /System/Applications/Utilities/Terminal.app/Contents/Resources/Fonts/*.otf ~/Library/Fonts/
 
 # Brewfile was updated from dotfiles
 brew bundle
