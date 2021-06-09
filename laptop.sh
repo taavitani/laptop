@@ -37,6 +37,9 @@ defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true
 defaults write -g InitialKeyRepeat -int 20
 defaults write -g KeyRepeat -int 4
 
+# Disable MacOS default key hold character selection popup
+defaults write -g ApplePressAndHoldEnabled -bool false
+
 # Use dark style for menu bar and Dock
 defaults write NSGlobalDomain AppleInterfaceStyle -string Dark
 
