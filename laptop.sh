@@ -97,3 +97,20 @@ LAPTOP_REPO=https://github.com/taavitani/laptop
 LAPTOP_PATH=~/src/${LAPTOP_REPO##https://}
 
 git clone $LAPTOP_REPO $LAPTOP_PATH
+
+cat <<_EOT
+To set up OpenSSH agent and tmux launchd services after software and dotfiles are installed.
+
+Run w/ SIP disabled to stop the MacOS packaged agent from running:
+$ launchctl unload -w /System/Library/LaunchAgents/com.openssh.ssh-agent.plist
+
+And start OpenSSH agent and tmux services:
+$ launchctl load -wF ~/Library/LaunchAgents/org.homebrew.ssh-agent.plist
+$ launchctl load -wF ~/Library/LaunchAgents/org.homebrew.ssh-agent-env.plist
+$ launchctl load -wF ~/Library/LaunchAgents/org.homebrew.tmux.plist
+
+To check status/debug:
+$ launchctl list | fgrep homebrew
+$ syslog -w
+$ ssh-add -l # in tmux
+_EOT
